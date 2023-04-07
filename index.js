@@ -10,12 +10,14 @@ app.get('/', function(req, res) {
 })
 
 app.get('/test', function(req, res) {
-	var str = JSON.stringify(req.body, null, 2);	
+	var str = JSON.stringify(req.body, null, 2);
+	console.log('**GET**');
 	console.log(str);
 	res.sendStatus(200);
 })
 app.post('/test', function(req, res) {
 	var str = JSON.stringify(req.body, null, 2);	
+	console.log('**POST**');
 	console.log(str);
 	res.sendStatus(200);
 })
